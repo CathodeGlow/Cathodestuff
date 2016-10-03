@@ -1,0 +1,37 @@
+T1A06-Spy-Da.html
+
+
+<h1 align=center>Spy program by Da</h1>
+
+
+Write your private ideas here<br>
+<textarea id="myArea1" rows=5 cols=70>This is good</textarea><br><br>
+
+
+<input type=button value=encrypt onclick="{
+//make a button and define its function
+   
+var EncodedString = btoa(document.getElementById('myArea1').value);
+//Define EncodedString, which is stuff BTOA crypted from the first text area
+
+document.getElementById('myArea2').value = EncodedString
+//grab and print the encoded string in text area 2
+
+    
+}"><br>
+
+The encrypted version to email goes here<br>
+<textarea id="myArea2" rows=5 cols=70></textarea><br><br>
+
+
+
+The decrypted reply goes here.<br>
+<input type=button value=decrypt onclick="{
+
+var DecodedString = atob(document.getElementById('myArea2').value);
+document.getElementById('myArea3').value = DecodedString;
+   
+   
+}"><br>
+
+<textarea id="myArea3" rows=5 cols=70></textarea><br><br>
