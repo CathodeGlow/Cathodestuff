@@ -1,0 +1,12 @@
+<textarea id="myArea1" rows=1 cols=30></textarea><br><br>
+<textarea id="myArea2" rows=1 cols=30></textarea><br><br>
+<input type=button value="Random" onclick="{
+var randomcolor = ['Red', 'Blue', 'Green'];
+var colorout= randomcolor[Math.floor(Math.random() * 4)];
+document.getElementById('myArea1').value = colorout
+if (colorout = 'red') {
+document.body.style.backgroundColor = '#AA0000'
+}
+
+}"
+>
