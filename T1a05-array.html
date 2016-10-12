@@ -1,14 +1,17 @@
-<script>
-myIntArray = new Array()
-myIntArray[0] = 35
-myIntArray[1] = 17
-myIntArray[2] = 12
-myIntArray[3] = 54
-myIntArray[4] = 99
-myIntArray[5] = 10
-myIntArray[6] = 08
-myIntArray[7] = 76
-for (i=0; i<myIntArray.length;i++)
-document.writeln(myIntArray[i])
-document.writeln(myIntArray[7])
-</script>
+<textarea id="myArea1" rows=1 cols=30></textarea><br><br>
+<textarea id="myArea2" rows=1 cols=30></textarea><br><br>
+<input type=button value="Random" onclick="{
+var myArray = [];
+for(var i = 0; i < 1; i++) {
+myArray[i] = Math.floor( Math.random() * 100 );
+}
+document.getElementById('myArea1').value = myArray
+if (myArray < 50) {
+document.getElementById('myArea2').value = 'less than 50'  
+}
+
+else {
+document.getElementById('myArea2').value = 'greater than 50' 
+} 
+}"
+>
