@@ -11,10 +11,15 @@ T1A03-Color.html
   myOut = document.getElementById('myArea')
   myIn  = document.getElementById('myInput')
   myOut.innerHTML = ''
-
   for (myCount = 1; myCount <= myIn.value; myCount++){
     if (myCount == 2 ){
       myOut.innerHTML +='<font color=red>' + myCount + '</font></br>'
+    } 
+    if (myCount == 3 ){
+      myOut.innerHTML +='<font color=blue>' + myCount + '</font></br>'
+    } 
+    if (myCount == 2 ){
+      myOut.innerHTML +='<font color=green>' + myCount + '</font></br>'
     } 
   }
 }"> <br><br>
@@ -24,5 +29,3 @@ T1A03-Color.html
 }">
 
 <div id="myArea" > Your output  will  go here <br></div> <br>
-
-
