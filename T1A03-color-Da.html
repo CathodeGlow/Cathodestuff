@@ -1,31 +1,11 @@
-T1A03-Color.html
-
-
-
-
-<h1 align=center>t1a03-color by Da </h1>
-<input id="myInput" type=text value="12"> <br><br>
-
-
-<input type=button value="Loop Add" onclick="{
-  myOut = document.getElementById('myArea')
-  myIn  = document.getElementById('myInput')
-  myOut.innerHTML = ''
-  for (myCount = 1; myCount <= myIn.value; myCount++){
-    if (myCount == 2 ){
-      myOut.innerHTML +='<font color=red>' + myCount + '</font></br>'
-    } 
-    if (myCount == 3 ){
-      myOut.innerHTML +='<font color=blue>' + myCount + '</font></br>'
-    } 
-    if (myCount == 4 ){
-      myOut.innerHTML +='<font color=green>' + myCount + '</font></br>'
-    } 
-    
-}"> <br><br>
-
-<input type=button value="show Div after clicking Loop Add" onclick="{  
-   alert(myOut.innerHTML)
-}">
-
-<div id="myArea" > Your output  will  go here <br></div> <br>
+<textarea id="myArea1" rows=1 cols=30></textarea><br><br>
+<textarea id="myArea2" rows=1 cols=30></textarea><br><br>
+<input type=button value="Random" onclick="{
+var randomcolor = ['Red', 'Blue', 'Green'];
+var colorout= randomcolor[Math.floor(Math.random() * 4)];
+document.getElementById('myArea1').value = colorout
+if (colorout = 'red') {
+document.body.style.backgroundColor = '#AA0000'
+}
+}"
+>
