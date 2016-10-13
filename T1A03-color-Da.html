@@ -2,10 +2,16 @@
 <textarea id="myArea2" rows=1 cols=30></textarea><br><br>
 <input type=button value="Random" onclick="{
 var randomcolor = ['Red', 'Blue', 'Green'];
-var colorout= randomcolor[Math.floor(Math.random() * 4)];
+var colorout= randomcolor[Math.floor(Math.random() * 3)];
 document.getElementById('myArea1').value = colorout
-if (colorout = 'red') {
-document.body.style.backgroundColor = '#AA0000'
+if (colorout == 'Red') {
+document.body.style.backgroundColor = '#FF0000'
+}
+else if (colorout == 'Blue') {
+document.body.style.backgroundColor = '#0000FF'
+}
+else if (colorout == 'Green') {
+document.body.style.backgroundColor = '#00FF00'
 }
 }"
 >
