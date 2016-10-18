@@ -1,0 +1,86 @@
+<title>Da's FUNK</title>
+<h1 align=center>Da Funk </h1>
+<h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Mouse over this text</h1>
+
+
+
+<input type="button" value="click me" id="btn">
+<input type="button" value="right-click me" id="btn2">
+<input type="button" value="doubleclick me" id="btn3">
+
+	<script>
+	
+	
+	document.getElementById('btn').onclick = function() {
+	  alert('click!')
+	}
+	 
+	document.getElementById('btn2').oncontextmenu = function() {
+	  alert('right click!')
+	}
+	
+	document.getElementById('btn3').ondblclick = function() {
+	  alert('dblclick!')
+	}
+	</script>
+	
+	<script>
+	
+	function keypress() {
+    alert("You pressed a key");
+}
+    </script>
+
+
+<p>type here</p>
+
+<input type="text" onkeydown="keypress()">
+
+
+
+
+<script>
+function color(color) {
+    document.forms[0].pressInput.style.background = color;
+}
+</script>
+
+
+<form>
+Write here:<br>
+<input
+type="text" 
+onkeydown="color('green')"
+onkeyup="color('red')"
+name="pressInput">
+</form>
+</script>
+
+
+
+<script>
+function Load() {
+    alert("Locked and loaded!");
+}
+</script>
+
+<script>
+function UnLoad() {
+    alert("Goodbye");
+}
+
+
+</script>
+
+<script>
+function Keycode(event) {
+    document.getElementById("demo").innerHTML = event.keyCode;
+}
+</script>
+<body onkeyup="Keycode(event)">
+<p>press a button.</p>
+<br>
+<p id="demo"></p>
+
+<body onload="Load()">
+<body onunload="UnLoad()">
