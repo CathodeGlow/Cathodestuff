@@ -1,0 +1,60 @@
+<html>
+   
+   <head>
+      <title>JavaScript Animation</title>
+      
+      <script type="text/javascript">
+         <!--
+            var imgObj = null;
+            var animate ;
+            
+            function init(){
+               imgObj = document.getElementById('myImage');
+               imgObj.style.position= 'relative'; 
+               imgObj.style.left = '0px';
+               imgObj.style.top = '0px'; 			   
+            }
+            
+            function moveRight(){
+               imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+               animate = setTimeout(moveRight,20); // call moveRight in 20msec
+            }
+			
+			function moveLeft(){
+               imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+               animate = setTimeout(moveLeft,20); // call moveLeft in 20msec
+            }
+            
+			function moveUp(){
+               imgObj.style.top = parseInt(imgObj.style.top) - 10 + 'px';
+               animate = setTimeout(moveUp,20); // call moveup in 20msec
+            }
+			function moveDown(){
+               imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px';
+               animate = setTimeout(moveDown,20); // call moveup in 20msec
+            }
+            function stop(){
+               clearTimeout(animate);
+               imgObj.style.left = '0px'; 
+            }
+            
+            window.onload =init;
+         //-->
+      </script>
+      
+   </head>
+   
+   <body>
+   
+      <form>
+         <img id="myImage" src="http://www.lovethisgif.com/uploaded_images/31571-Corgi-Gif-Swimming-Corgi-Puppy-Dog-Taking-A-Bath-Animated-Gif-Saint.gif" />
+         <p>Click the buttons below to handle animation</p>
+         <input type="button" value="right" onclick="moveRight();" />
+		 <input type="button" value="left" onclick="moveLeft();" />
+         <input type="button" value="Stop" onclick="stop();" />
+		 <input type="button" value="Up" onclick="moveUp();" />
+		 <input type="button" value="Down" onclick="moveDown();" />
+      </form>
+      
+   </body>
+</html>
